@@ -59,7 +59,8 @@ directories.forEach(subdirectory => {
         heading = `Discussion: ${dms[subdirectory].members.map(memberId => users[memberId].real_name).join(", ")}`;
       }
       messages[message.ts] = {
-        heading: `${new Date(parseFloat(message.ts) * 1000).toLocaleDateString("en-US")} ${heading}`,
+        heading: heading,
+        date: new Date(parseFloat(message.ts) * 1000),
         text: processText(message.text),
         user: users[message.user].real_name
       };
@@ -71,6 +72,9 @@ Object.keys(messages)
   .sort()
   .forEach(key => {
     console.log(messages[key]["heading"]);
+    console.log(
+      `${messages[key]["date"].toLocaleDateString("en-US")} ${messages[key]["date"].toLocaleTimeString("en-US")}`
+    );
     console.log(`${messages[key]["user"]}: ${messages[key]["text"]}`);
     console.log("\n");
   });

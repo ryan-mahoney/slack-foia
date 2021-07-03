@@ -18,12 +18,17 @@ Note: you will need to look at the `users.json` file in the export to determine 
 This script currently produces output like:
 
 ```txt
-6/2/2021 Private Dicussion: Tom Smith, Jane Jones
-Tom Smith
-Yes, thanks!
+Discussion: Anna Jones, Tom Smith
+6/2/2021 10:54:18 AM
+Anna Jones: GoTo is better for me! Can you throw something on my calendar?
 
 
-4/6/2021 Channel: pizza
-Tom Smith
-I like cheese.
+Discussion: Anna Jones, Tom Smith
+6/2/2021 10:56:45 AM
+Tom Smith: Sent!
+
+
+Channel: general
+6/2/2021 10:58:44 AM
+Tom Smith: Hi everyone, my name is Tom.
 ```
